@@ -1,4 +1,5 @@
 # Smart-Weather-Station 🌦️✨
+<img width="846" alt="image" src="https://github.com/user-attachments/assets/cbe3eedd-ac2d-4721-bd67-888cdd01821c" />
 
 ## Descriere detaliată 📖
 
