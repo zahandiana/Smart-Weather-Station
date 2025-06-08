@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grafic Parametru</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="dashboard">
+    <a href="index.html" style="color: gold; text-decoration: none;">⬅ Înapoi</a>
+    <h1 id="chart-title">Vizualizare grafic parametru</h1>
+    <select id="mode" style="margin: 10px 0;">
+      <option value="real">Date reale</option>
+      <option value="sim">Simulare</option>
+    </select>
+    <h2 id="numeric-value">Valoare curentă simulată:</h2>
+    <canvas id="paramChart" width="800" height="400"></canvas>
+    <p id="definition" style="margin-top: 20px; font-size: 1rem;"></p>
+  </main>
+  <script type="module" src="chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Weather Station</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="dashboard glow">
+    <h1>Smart Weather Station</h1>
+    <h2 class="location-temp">🌍 Cluj-Napoca: <span id="cluj-temp">--</span> °C</h2>
+    <section class="weather-data">
+      <div class="card" onclick="goToChart('temperature')">🌡️ Temperatură exterioară</div>
+      <div class="card" onclick="goToChart('humidity')">💧 Umiditate atmosferică</div>
+      <div class="card" onclick="goToChart('pressure')">🧭 Presiune atmosferică</div>
+      <div class="card" onclick="goToChart('vibration')">🌍 Nivel de vibrații</div>
+      <div class="card" onclick="goToChart('airQuality')">🫁 Calitate aer (AQI)</div>
+      <div class="card" onclick="goToChart('noise')">🔊 Nivel de zgomot</div>
+      <div class="card" onclick="goToChart('light')">💡 Intensitate luminoasă</div>
+    </section>
+  </main>
+  <script type="module" src="script.js"></script>
+  <script type="module">
+    import { getRealData } from './data/real_data.js';
+    getRealData().then(data => {
+      document.getElementById('cluj-temp').innerText = data.temperature;
+    });
+  </script>
+  <script>
+    function goToChart(param) {
+      window.location.href = `chart.html?param=${param}`;
+    }
+  </script>
+</body>
+</html>
